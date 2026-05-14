@@ -4,6 +4,13 @@ BETAPP Backend - FastAPI Application Entry Point
 Main FastAPI application for the AI Sports Betting Predictor.
 TODO: Add authentication, database models, websockets for real-time updates
 """
+import sys
+import os
+from pathlib import Path
+
+# Add parent directory to path for imports
+sys.path.insert(0, str(Path(__file__).parent))
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
